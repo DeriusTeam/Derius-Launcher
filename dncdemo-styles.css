@@ -3,6 +3,7 @@
 /* ==================== */
 .game-page {
     padding: 20px;
+    margin-top: 70px; /* Aggiungi margine superiore per separare il contenuto dalla barra */
     animation: fadeIn 1s ease-out;
 }
 
