@@ -71,22 +71,16 @@ header h1 {
 /* ==================== */
 /* Stili per la homepage */
 /* ==================== */
-/* ==================== */
-/* Stili per la homepage */
-/* ==================== */
-/* ==================== */
-/* Stili per la homepage */
-/* ==================== */
 .games-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Larghezza minima di 150px */
-    gap: 15px; /* Spazio tra le card */
+    gap: 10px; /* Spaziatura ridotta tra le card */
     padding: 15px;
 }
 
 .game-card {
     background-color: var(--card-color);
-    border-radius: 10px; /* Bordi più arrotondati */
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
     text-decoration: none;
@@ -94,41 +88,42 @@ header h1 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.5s ease-out;
-    width: 150px; /* Larghezza fissa più piccola */
-    height: 200px; /* Altezza fissa più piccola */
+    width: 150px; /* Larghezza fissa */
+    height: 200px; /* Altezza fissa */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .game-card:hover {
-    transform: translateY(-5px); /* Effetto hover più sottile */
+    transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .game-card img {
     width: 100%;
-    height: 120px; /* Altezza fissa per l'immagine */
-    object-fit: cover; /* Ritaglia l'immagine per adattarla al contenitore */
+    height: 120px;
+    object-fit: cover;
     border-bottom: 2px solid #555;
     transition: transform 0.3s ease;
 }
 
 .game-card:hover img {
-    transform: scale(1.05); /* Effetto hover più sottile */
+    transform: scale(1.05);
 }
 
 .game-card h3 {
-    margin: 10px 0; /* Margine ridotto */
-    font-size: 1rem; /* Dimensione del font più piccola */
+    margin: 10px 0;
+    font-size: 1rem;
     font-weight: 600;
     transition: color 0.3s ease;
-    padding: 0 8px; /* Padding ridotto */
+    padding: 0 8px;
 }
 
 .game-card:hover h3 {
     color: var(--primary-color);
 }
+
 /* Animazioni */
 @keyframes fadeInUp {
     from {
