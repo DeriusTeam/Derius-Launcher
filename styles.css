@@ -17,14 +17,12 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    margin-top: 200;
-    padding-top: 200;
     overflow-x: hidden;
 }
 
 .main-content {
-    margin-top: 50px;
-    padding-top: 50px;/* Deve corrispondere all'altezza della barra */
+    margin-top: 100px;
+    padding-top: 100px;/* Deve corrispondere all'altezza della barra */
 }
 
 /* ==================== */
