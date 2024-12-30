@@ -17,29 +17,23 @@ body {
 header {
     background-color: #333;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Allinea il logo e il titolo verticalmente */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* Per posizionare il logo */
 }
 
+/* Logo */
+.logo img {
+    width: 150px; /* Regola la dimensione del logo (rendilo grande) */
+    height: auto;
+    margin-right: 20px; /* Spazio tra il logo e il titolo */
+}
+
+/* Titolo */
 header h1 {
     font-size: 2.5rem;
     font-weight: 600;
     margin: 0; /* Rimuove il margine predefinito */
-}
-
-/* Logo */
-.logo {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.logo img {
-    width: 50px; /* Regola la dimensione del logo */
-    height: auto;
-    border-radius: 50%; /* Opzionale: rende il logo rotondo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Opzionale: aggiunge un'ombra */
 }
 
 /* Sezione giochi */
