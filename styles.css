@@ -1,10 +1,19 @@
 /* ==================== */
 /* Stili generali       */
 /* ==================== */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --background-color: #1e1e1e;
+    --card-color: #444;
+    --text-color: white;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1e1e1e;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -15,7 +24,7 @@ header {
     padding: 20px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     animation: fadeInDown 1s ease-out;
 }
 
@@ -63,21 +72,19 @@ header h1 {
 /* Stili per la homepage */
 /* ==================== */
 .games-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    padding: 20px;
 }
 
 .game-card {
-    background-color: #444;
+    background-color: var(--card-color);
     border-radius: 15px;
     overflow: hidden;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.5s ease-out;
@@ -108,7 +115,7 @@ header h1 {
 }
 
 .game-card:hover h3 {
-    color: #007BFF; /* Cambia colore al titolo al passaggio del mouse */
+    color: var(--primary-color); /* Cambia colore al titolo al passaggio del mouse */
 }
 
 /* Animazioni */
