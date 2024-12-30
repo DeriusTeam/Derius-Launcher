@@ -74,16 +74,19 @@ header h1 {
 /* ==================== */
 /* Stili per la homepage */
 /* ==================== */
+/* ==================== */
+/* Stili per la homepage */
+/* ==================== */
 .games-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Larghezza minima di 250px */
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Larghezza minima di 150px */
+    gap: 15px; /* Spazio tra le card */
+    padding: 15px;
 }
 
 .game-card {
     background-color: var(--card-color);
-    border-radius: 15px;
+    border-radius: 10px; /* Bordi più arrotondati */
     overflow: hidden;
     box-shadow: var(--shadow);
     text-decoration: none;
@@ -91,36 +94,36 @@ header h1 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.5s ease-out;
-    width: 250px; /* Larghezza fissa */
-    height: 350px; /* Altezza fissa */
+    width: 150px; /* Larghezza fissa più piccola */
+    height: 200px; /* Altezza fissa più piccola */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Effetto hover più sottile */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .game-card img {
     width: 100%;
-    height: 200px; /* Altezza fissa per l'immagine */
+    height: 120px; /* Altezza fissa per l'immagine */
     object-fit: cover; /* Ritaglia l'immagine per adattarla al contenitore */
     border-bottom: 2px solid #555;
     transition: transform 0.3s ease;
 }
 
 .game-card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Effetto hover più sottile */
 }
 
 .game-card h3 {
-    margin: 15px 0;
-    font-size: 1.2rem;
+    margin: 10px 0; /* Margine ridotto */
+    font-size: 1rem; /* Dimensione del font più piccola */
     font-weight: 600;
     transition: color 0.3s ease;
-    padding: 0 10px; /* Padding per il testo */
+    padding: 0 8px; /* Padding ridotto */
 }
 
 .game-card:hover h3 {
