@@ -10,6 +10,8 @@
     --header-color: #1a1a1a;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
 }
 
 /* ==================== */
@@ -37,20 +39,20 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 80px; /* Barra più alta */
     background-color: var(--header-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 30px;
     box-shadow: var(--shadow);
     z-index: 1000;
 }
 
 .logo img {
-    width: 40px;
+    width: 50px; /* Logo più grande */
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-speed) ease;
 }
 
 .logo img:hover {
@@ -58,18 +60,18 @@ header {
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Titolo più grande */
     font-weight: 600;
     color: var(--text-color);
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 /* ==================== */
 /* Contenuto principale */
 /* ==================== */
 main {
-    margin-top: 90px; /* Spazio per l'header */
-    padding: 20px;
+    margin-top: 100px; /* Più spazio tra la barra e il contenuto */
+    padding: 30px;
 }
 
 /* ==================== */
@@ -77,25 +79,25 @@ main {
 /* ==================== */
 .games-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Card piccole e verticali */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Card piccole e verticali */
+    gap: 25px;
     padding: 20px;
 }
 
 .game-card {
     background-color: var(--card-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     text-decoration: none;
     color: var(--text-color);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     animation: fadeInUp 0.5s ease-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 280px; /* Altezza fissa per le card */
+    height: 300px; /* Altezza fissa per le card */
 }
 
 .game-card:hover {
@@ -105,10 +107,10 @@ main {
 
 .game-card img {
     width: 100%;
-    height: 160px; /* Altezza fissa per l'immagine */
+    height: 180px; /* Altezza fissa per l'immagine */
     object-fit: cover; /* Ritaglia l'immagine per adattarla */
     border-bottom: 2px solid #444;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-speed) ease;
 }
 
 .game-card:hover img {
@@ -117,9 +119,9 @@ main {
 
 .game-card h3 {
     margin: 15px 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Testo più grande */
     font-weight: 600;
-    padding: 0 10px;
+    padding: 0 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -145,23 +147,38 @@ main {
 /* Media query per schermi piccoli */
 /* ==================== */
 @media (max-width: 768px) {
+    header {
+        height: 70px; /* Barra più bassa su mobile */
+        padding: 0 20px;
+    }
+
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.4rem; /* Titolo più piccolo su mobile */
+    }
+
+    .logo img {
+        width: 40px; /* Logo più piccolo su mobile */
+    }
+
+    main {
+        margin-top: 90px; /* Meno spazio su mobile */
+        padding: 20px;
     }
 
     .games-section {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Card più piccole su mobile */
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Card più piccole su mobile */
+        gap: 15px;
     }
 
     .game-card {
-        height: 240px;
+        height: 260px; /* Altezza ridotta su mobile */
     }
 
     .game-card img {
-        height: 130px;
+        height: 150px; /* Immagine più piccola su mobile */
     }
 
     .game-card h3 {
-        font-size: 1rem;
+        font-size: 1rem; /* Testo più piccolo su mobile */
     }
 }
