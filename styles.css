@@ -39,18 +39,18 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; /* Barra più alta */
-    background-color: var(--header-color);
+    height: 70px; /* Altezza della barra */
+    background-color: var(--header-color); /* Colore nero chiaro */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 20px;
     box-shadow: var(--shadow);
     z-index: 1000;
 }
 
 .logo img {
-    width: 50px; /* Logo più grande */
+    width: 40px; /* Dimensione del logo */
     height: auto;
     transition: transform var(--transition-speed) ease;
 }
@@ -60,18 +60,18 @@ header {
 }
 
 header h1 {
-    font-size: 1.8rem; /* Titolo più grande */
+    font-size: 1.5rem; /* Dimensione del titolo */
     font-weight: 600;
     color: var(--text-color);
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 /* ==================== */
 /* Contenuto principale */
 /* ==================== */
 main {
-    margin-top: 100px; /* Più spazio tra la barra e il contenuto */
-    padding: 30px;
+    margin-top: 90px; /* Spazio tra la barra e il contenuto */
+    padding: 20px;
 }
 
 /* ==================== */
@@ -79,8 +79,8 @@ main {
 /* ==================== */
 .games-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Card piccole e verticali */
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Card piccole e verticali */
+    gap: 20px;
     padding: 20px;
 }
 
@@ -97,7 +97,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px; /* Altezza fissa per le card */
+    height: 280px; /* Altezza fissa per le card */
 }
 
 .game-card:hover {
@@ -107,7 +107,7 @@ main {
 
 .game-card img {
     width: 100%;
-    height: 180px; /* Altezza fissa per l'immagine */
+    height: 160px; /* Altezza fissa per l'immagine */
     object-fit: cover; /* Ritaglia l'immagine per adattarla */
     border-bottom: 2px solid #444;
     transition: transform var(--transition-speed) ease;
@@ -119,9 +119,9 @@ main {
 
 .game-card h3 {
     margin: 15px 0;
-    font-size: 1.2rem; /* Testo più grande */
+    font-size: 1.1rem; /* Dimensione del testo */
     font-weight: 600;
-    padding: 0 15px;
+    padding: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -148,34 +148,34 @@ main {
 /* ==================== */
 @media (max-width: 768px) {
     header {
-        height: 70px; /* Barra più bassa su mobile */
-        padding: 0 20px;
+        height: 60px; /* Barra più bassa su mobile */
+        padding: 0 15px;
     }
 
     header h1 {
-        font-size: 1.4rem; /* Titolo più piccolo su mobile */
+        font-size: 1.2rem; /* Titolo più piccolo su mobile */
     }
 
     .logo img {
-        width: 40px; /* Logo più piccolo su mobile */
+        width: 35px; /* Logo più piccolo su mobile */
     }
 
     main {
-        margin-top: 90px; /* Meno spazio su mobile */
-        padding: 20px;
+        margin-top: 80px; /* Meno spazio su mobile */
+        padding: 15px;
     }
 
     .games-section {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Card più piccole su mobile */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Card più piccole su mobile */
         gap: 15px;
     }
 
     .game-card {
-        height: 260px; /* Altezza ridotta su mobile */
+        height: 240px; /* Altezza ridotta su mobile */
     }
 
     .game-card img {
-        height: 150px; /* Immagine più piccola su mobile */
+        height: 130px; /* Immagine più piccola su mobile */
     }
 
     .game-card h3 {
