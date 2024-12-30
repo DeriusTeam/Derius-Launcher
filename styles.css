@@ -84,9 +84,6 @@ main {
     padding: 20px;
 }
 
-/* ==================== */
-/* Stili per le card */
-/* ==================== */
 .game-card {
     background-color: var(--card-color);
     border-radius: var(--border-radius);
@@ -128,6 +125,12 @@ main {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    transition: transform var(--transition-speed) ease, color var(--transition-speed) ease; /* Aggiungi transizione */
+}
+
+.game-card:hover h3 {
+    transform: translateY(-5px); /* Effetto di sollevamento */
+    color: var(--primary-color); /* Cambia colore al passaggio del mouse */
 }
 
 /* ==================== */
@@ -154,10 +157,11 @@ main {
 
     .game-card {
         height: 250px;
+        width: 150px; /* Larghezza ridotta per schermi piccoli */
     }
 
     .game-card img {
-        height: 130px;
+        height: 130px; /* Altezza ridotta per schermi piccoli */
     }
 
     .game-card h3 {
