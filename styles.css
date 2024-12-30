@@ -103,7 +103,7 @@ main {
 }
 
 .game-card:hover {
-    transform: translateY(-10px); /* Effetto di sollevamento */
+    transform: translateY(-10px); /* Effetto di sollevamento per l'intera card */
     box-shadow: var(--hover-shadow); /* Ombra più pronunciata */
 }
 
