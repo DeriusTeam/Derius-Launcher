@@ -1,9 +1,81 @@
 /* ==================== */
+/* Variabili CSS (root) */
+/* ==================== */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --background-color: #1e1e1e;
+    --card-color: #444;
+    --text-color: white;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== */
+/* Stili generali       */
+/* ==================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ==================== */
+/* Stili per l'header    */
+/* ==================== */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: var(--shadow);
+    height: 60px; /* Altezza fissa per l'header */
+    display: flex;
+    align-items: center; /* Allinea il logo e il testo verticalmente al centro */
+    position: fixed; /* Fissa l'header in cima alla pagina */
+    top: 0; /* Posiziona l'header in cima */
+    z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
+}
+
+/* Logo e titolo */
+.logo {
+    margin-right: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ==================== */
+/* Stili per il contenuto principale */
+/* ==================== */
+.main-content {
+    padding: 20px;
+    margin-top: 60px; /* Margine superiore uguale all'altezza dell'header */
+}
+
+/* ==================== */
 /* Stili per la pagina di gioco */
 /* ==================== */
 .game-page {
     padding: 20px;
-    margin-top: 70px; /* Aggiungi margine superiore per separare il contenuto dalla barra */
     animation: fadeIn 1s ease-out;
 }
 
@@ -40,11 +112,6 @@
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-}
-
-.main-content {
-    padding: 20px;
-    margin-top: 60px; /* Margine superiore uguale all'altezza dell'header */
 }
 
 .download-button {
@@ -94,6 +161,15 @@
 }
 
 /* Animazioni */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -113,5 +189,27 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* ==================== */
+/* Media query per schermi piccoli */
+/* ==================== */
+@media (max-width: 768px) {
+    .game-hero {
+        grid-template-columns: 1fr; /* Layout a una colonna per schermi piccoli */
+    }
+
+    .screenshots img {
+        width: 150px; /* Larghezza ridotta per schermi piccoli */
+        height: 100px; /* Altezza ridotta per schermi piccoli */
+    }
+
+    header h1 {
+        font-size: 1rem; /* Dimensione del testo ridotta per schermi piccoli */
+    }
+
+    .logo img {
+        width: 30px; /* Larghezza del logo ridotta per schermi piccoli */
     }
 }
