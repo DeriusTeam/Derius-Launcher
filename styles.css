@@ -74,8 +74,8 @@ header h1 {
 .games-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Larghezza minima di 150px */
-    gap: 10px; /* Spaziatura ridotta tra le card */
-    padding: 15px;
+    gap: 5px; /* Spaziatura ridotta tra le card */
+    padding: 10px; /* Padding ridotto */
 }
 
 .game-card {
