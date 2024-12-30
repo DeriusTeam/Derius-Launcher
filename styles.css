@@ -25,8 +25,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #1e1e1e;
+    color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -40,36 +40,30 @@ header {
     left: 0;
     width: 100%;
     height: 70px; /* Altezza della barra */
-    background-color: var(--header-color); /* Colore nero chiaro */
+    background-color: #1a1a1a; /* Colore nero chiaro */
     display: flex;
     align-items: center; /* Allinea gli elementi verticalmente al centro */
     padding: 0 20px; /* Spaziatura interna */
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
+/* Allineamento logo e testo */
 .logo {
     display: flex;
     align-items: center; /* Allinea logo e testo verticalmente */
 }
 
-/* Stile per il logo e il testo */
-.logo {
-    display: grid;
-    grid-template-columns: auto 1fr; /* Logo e testo affianco */
-    align-items: center; /* Allinea verticalmente al centro */
-    gap: 10px; /* Spaziatura tra logo e testo */
-}
-
 .logo img {
     width: 40px; /* Dimensione del logo */
     height: auto;
+    margin-right: 10px; /* Spaziatura tra logo e testo */
 }
 
 header h1 {
     font-size: 1.5rem; /* Dimensione del titolo */
     font-weight: 600;
-    color: var(--text-color);
+    color: #ffffff;
     margin: 0; /* Rimuove il margine predefinito */
 }
 
@@ -80,7 +74,6 @@ main {
     margin-top: 90px; /* Spazio tra la barra e il contenuto */
     padding: 20px;
 }
-
 /* ==================== */
 /* Sezione delle card */
 /* ==================== */
