@@ -22,11 +22,16 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
+/* Logo container */
+.logo {
+    display: inline-block; /* Assicura che il div si comporti come un blocco inline */
+    margin-right: 20px; /* Spazio tra il logo e il titolo */
+}
+
+/* Logo image */
 .logo img {
     width: 150px; /* Rendi il logo grande */
     height: auto;
-    margin-right: 20px; /* Spazio tra il logo e il titolo */
 }
 
 /* Titolo */
