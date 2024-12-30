@@ -59,14 +59,14 @@
 
 /* Sezione screenshot */
 .screenshots {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Larghezza minima di 200px */
     gap: 10px; /* Spazio tra gli screenshot */
     margin-bottom: 20px;
 }
 
 .screenshots img {
-    width: 200px; /* Larghezza fissa per tutti gli screenshot */
+    width: 100%; /* Larghezza al 100% del contenitore */
     height: 150px; /* Altezza fissa per tutti gli screenshot */
     border-radius: 10px;
     box-shadow: var(--shadow);
