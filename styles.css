@@ -27,55 +27,57 @@ body {
 /* ==================== */
 header {
     background-color: #333;
-    padding: 10px 20px; /* Padding ridotto */
-    position: fixed; /* Fissa l'header in alto */
-    top: 0;
-    left: 0;
-    width: 100%; /* Occupa tutta la larghezza */
-    z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
+    padding: 10px 20px;
+    width: 100%;
     box-shadow: var(--shadow);
-    animation: fadeInDown 1s ease-out; /* Animazione per l'header */
+    height: 60px; /* Altezza fissa per l'header */
+    display: flex;
+    align-items: center; /* Allinea il logo e il testo verticalmente al centro */
+    position: fixed; /* Fissa l'header in cima alla pagina */
+    top: 0; /* Posiziona l'header in cima */
+    z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
 }
 
-/* Logo */
+/* Logo e titolo */
 .logo {
-    float: left; /* Posiziona il logo a sinistra */
-    margin-right: 10px; /* Spazio tra il logo e il testo */
+    margin-right: 10px;
 }
 
 .logo img {
-    width: 40px; /* Logo piccolo */
-    height: auto; /* Mantiene le proporzioni */
+    width: 40px;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* Effetto hover sul logo */
+    transform: scale(1.1);
 }
 
-/* Testo */
 header h1 {
-    float: left; /* Posiziona il titolo a sinistra */
-    font-size: 1.2rem; /* Dimensione del testo ridotta */
+    font-size: 1.2rem;
     font-weight: 600;
-    margin: 0; /* Rimuove il margine predefinito */
-    color: var(--text-color); /* Usa la variabile per il colore del testo */
-    line-height: 40px; /* Allinea il testo verticalmente con il logo */
-    white-space: nowrap; /* Impedisce al testo di andare a capo */
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    text-overflow: ellipsis; /* Aggiunge "..." se il testo è troppo lungo */
-    animation: fadeIn 1.5s ease-out; /* Animazione per il testo */
+    margin: 0;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* ==================== */
-/* Stili per la homepage */
+/* Stili per il contenuto principale */
+/* ==================== */
+.main-content {
+    padding: 20px;
+    margin-top: 80px; /* Margine superiore maggiore per evitare sovrapposizioni */
+}
+
+/* ==================== */
+/* Stili per la sezione delle card */
 /* ==================== */
 .games-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Larghezza minima di 220px */
     gap: 20px; /* Spaziatura tra le card */
-    padding: 20px; /* Padding della sezione */
-    margin-top: 70px; /* Spazio per l'header fisso */
 }
 
 .game-card {
@@ -103,10 +105,8 @@ header h1 {
 
 .game-card img {
     width: 100%;
-    height: 180px; /* Altezza maggiore per l'immagine */
-    object-fit: contain; /* Adatta l'immagine senza ritagli */
-    background-color: #333; /* Sfondo per evitare spazi vuoti */
-    padding: 10px; /* Padding per distanziare l'immagine dai bordi */
+    height: 180px; /* Altezza fissa per l'immagine */
+    object-fit: cover; /* Ritaglia l'immagine per adattarla al contenitore */
     border-bottom: 2px solid #555;
     transition: transform 0.3s ease;
 }
@@ -134,29 +134,7 @@ header h1 {
     color: var(--primary-color);
 }
 
-/* ==================== */
-/* Animazioni            */
-/* ==================== */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Animazioni */
 @keyframes fadeInUp {
     from {
         opacity: 0;
