@@ -92,7 +92,7 @@ main {
     text-decoration: none;
     color: var(--text-color);
     text-align: center;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Aggiungi transizione */
     animation: fadeInUp 0.5s ease-out;
     display: flex;
     flex-direction: column;
@@ -100,6 +100,11 @@ main {
     height: 300px; /* Altezza fissa per le card */
     width: 220px; /* Larghezza fissa per le card */
     margin: 0 auto; /* Centra le card se necessario */
+}
+
+.game-card:hover {
+    transform: translateY(-10px); /* Effetto di sollevamento */
+    box-shadow: var(--hover-shadow); /* Ombra più pronunciata */
 }
 
 .game-card img {
