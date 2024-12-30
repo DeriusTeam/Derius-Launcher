@@ -72,10 +72,8 @@ header h1 {
 /* Stili per la homepage */
 /* ==================== */
 .games-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Allinea le card a sinistra */
-    align-items: flex-start; /* Allinea le card in alto */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Larghezza minima di 150px */
     gap: 5px; /* Spaziatura ridotta tra le card */
     padding: 10px; /* Padding ridotto */
 }
@@ -90,7 +88,7 @@ header h1 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.5s ease-out;
-    width: 150px; /* Larghezza fissa */
+    width: 100%; /* Larghezza al 100% del contenitore */
     height: 200px; /* Altezza fissa */
     display: flex;
     flex-direction: column;
