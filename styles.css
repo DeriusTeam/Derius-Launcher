@@ -5,44 +5,50 @@
     --primary-color: #007BFF;
     --secondary-color: #0056b3;
     --background-color: #1e1e1e;
-    --card-color: #444;
-    --text-color: white;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --card-color: #2a2a2a;
+    --text-color: #ffffff;
+    --header-color: #1a1a1a;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* ==================== */
-/* Stili generali       */
+/* Reset e stili generali */
 /* ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Stile per l'header */
+/* ==================== */
+/* Barra in alto (Header) */
+/* ==================== */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Altezza dell'header */
-    z-index: 1000; /* Assicura che l'header sia sopra gli altri elementi */
-    background-color: #2a2a2a; /* Nero chiaro */
-}
-
-/* Stile per il contenuto principale */
-main {
-    margin-top: 60px; /* Sposta il contenuto sotto l'header */
-}
-
-/* Logo e titolo */
-.logo {
-    margin-right: 10px;
+    height: 70px;
+    background-color: var(--header-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
 }
 
 .logo img {
-    width: 40px; /* Logo piccolo */
+    width: 40px;
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -52,42 +58,28 @@ main {
 }
 
 header h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin: 0;
     color: var(--text-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px; /* Regola questo valore in base all'altezza della barra */
-    z-index: 1000;
-}
-
-.main-content {
-    margin-top: 50px; /* Deve corrispondere all'altezza della barra */
+    margin-left: 10px;
 }
 
 /* ==================== */
-/* Stili per il contenuto principale */
+/* Contenuto principale */
 /* ==================== */
-.main-content {
+main {
+    margin-top: 90px; /* Spazio per l'header */
     padding: 20px;
-    margin-top: 80px; /* Margine superiore maggiore per evitare sovrapposizioni */
 }
 
 /* ==================== */
-/* Stili per la sezione delle card */
+/* Sezione delle card */
 /* ==================== */
 .games-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Larghezza minima di 220px */
-    gap: 20px; /* Spaziatura tra le card */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Card piccole e verticali */
+    gap: 20px;
+    padding: 20px;
 }
 
 .game-card {
@@ -100,24 +92,22 @@ header h1 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.5s ease-out;
-    width: 100%; /* Larghezza al 100% del contenitore */
-    height: 300px; /* Altezza maggiore per un aspetto più bilanciato */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0; /* Rimuove eventuali margini */
+    height: 280px; /* Altezza fissa per le card */
 }
 
 .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
 }
 
 .game-card img {
     width: 100%;
-    height: 180px; /* Altezza fissa per l'immagine */
-    object-fit: cover; /* Ritaglia l'immagine per adattarla al contenitore */
-    border-bottom: 2px solid #555;
+    height: 160px; /* Altezza fissa per l'immagine */
+    object-fit: cover; /* Ritaglia l'immagine per adattarla */
+    border-bottom: 2px solid #444;
     transition: transform 0.3s ease;
 }
 
@@ -126,25 +116,20 @@ header h1 {
 }
 
 .game-card h3 {
-    margin: 10px 0;
-    font-size: 1.2rem; /* Dimensione del testo aumentata */
+    margin: 15px 0;
+    font-size: 1.1rem;
     font-weight: 600;
-    transition: color 0.3s ease;
     padding: 0 10px;
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    text-overflow: ellipsis; /* Aggiunge "..." se il testo è troppo lungo */
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* Limita il testo a 2 righe */
     -webkit-box-orient: vertical;
-    word-wrap: break-word; /* Permette al testo di andare a capo */
-    line-height: 1.4; /* Migliora la spaziatura tra le righe */
 }
 
-.game-card:hover h3 {
-    color: var(--primary-color);
-}
-
+/* ==================== */
 /* Animazioni */
+/* ==================== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -160,27 +145,23 @@ header h1 {
 /* Media query per schermi piccoli */
 /* ==================== */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
     .games-section {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Layout per schermi piccoli */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Card più piccole su mobile */
     }
 
     .game-card {
-        height: 250px; /* Altezza ridotta per schermi piccoli */
+        height: 240px;
     }
 
     .game-card img {
-        height: 150px; /* Altezza ridotta per l'immagine */
+        height: 130px;
     }
 
     .game-card h3 {
-        font-size: 1rem; /* Dimensione del testo ridotta per schermi piccoli */
-    }
-
-    header h1 {
-        font-size: 1rem; /* Dimensione del testo ridotta per schermi piccoli */
-    }
-
-    .logo img {
-        width: 30px; /* Larghezza del logo ridotta per schermi piccoli */
+        font-size: 1rem;
     }
 }
