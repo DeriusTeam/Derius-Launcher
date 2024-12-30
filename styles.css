@@ -54,15 +54,16 @@ header {
 }
 
 /* Stile per il logo e il testo */
-.logo img, header h1 {
-    display: inline-block;
-    vertical-align: middle; /* Allinea verticalmente al centro */
+.logo {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Logo e testo affianco */
+    align-items: center; /* Allinea verticalmente al centro */
+    gap: 10px; /* Spaziatura tra logo e testo */
 }
 
 .logo img {
     width: 40px; /* Dimensione del logo */
     height: auto;
-    margin-right: 10px; /* Spaziatura tra logo e testo */
 }
 
 header h1 {
@@ -71,6 +72,7 @@ header h1 {
     color: var(--text-color);
     margin: 0; /* Rimuove il margine predefinito */
 }
+
 /* ==================== */
 /* Contenuto principale */
 /* ==================== */
