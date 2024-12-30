@@ -20,6 +20,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    margin-top: 80px; /* Regola questo valore in base all'altezza dell'header */
+}
+
 /* ==================== */
 /* Stili per l'header    */
 /* ==================== */
