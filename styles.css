@@ -1,5 +1,5 @@
 /* ==================== */
-/* Stili generali       */
+/* Variabili CSS (root) */
 /* ==================== */
 :root {
     --primary-color: #007BFF;
@@ -10,6 +10,9 @@
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* ==================== */
+/* Stili generali       */
+/* ==================== */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -26,6 +29,7 @@ header {
     background-color: #333;
     padding: 10px 20px; /* Padding ridotto */
     display: flex;
+    justify-content: flex-end; /* Allinea il contenuto a destra */
     align-items: center; /* Allinea il logo e il testo verticalmente al centro */
     box-shadow: var(--shadow);
     position: fixed; /* Fissa l'header in alto */
@@ -37,9 +41,9 @@ header {
 
 /* Logo */
 .logo img {
-    width: 40px; /* Logo più piccolo */
+    width: 40px; /* Logo piccolo */
     height: auto; /* Mantiene le proporzioni */
-    margin-right: 10px; /* Spazio ridotto tra il logo e il testo */
+    margin-right: 10px; /* Spazio tra il logo e il testo */
     transition: transform 0.3s ease;
 }
 
@@ -49,10 +53,10 @@ header {
 
 /* Testo */
 header h1 {
-    font-size: 1rem; /* Dimensione del testo ridotta */
+    font-size: 1.2rem; /* Dimensione del testo ridotta */
     font-weight: 600;
     margin: 0; /* Rimuove il margine predefinito */
-    color: white; /* Colore del testo */
+    color: var(--text-color); /* Usa la variabile per il colore del testo */
 }
 
 /* ==================== */
@@ -63,6 +67,7 @@ header h1 {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Larghezza minima di 220px */
     gap: 20px; /* Spaziatura tra le card */
     padding: 20px; /* Padding della sezione */
+    margin-top: 70px; /* Spazio per l'header fisso */
 }
 
 .game-card {
@@ -124,26 +129,6 @@ header h1 {
 /* ==================== */
 /* Animazioni            */
 /* ==================== */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -168,10 +153,10 @@ header h1 {
     }
 
     header h1 {
-        font-size: 2rem; /* Dimensione del testo ridotta per schermi piccoli */
+        font-size: 1rem; /* Dimensione del testo ridotta per schermi piccoli */
     }
 
     .logo img {
-        width: 120px; /* Larghezza del logo ridotta per schermi piccoli */
+        width: 30px; /* Larghezza del logo ridotta per schermi piccoli */
     }
 }
