@@ -57,28 +57,17 @@
     transform: translateY(-5px);
 }
 
-/* Sezione informazioni aggiuntive */
-.game-info {
-    margin-top: 40px;
-    animation: fadeIn 1.5s ease-out;
-}
-
-.game-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
 /* Sezione screenshot */
 .screenshots {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larghezza minima di 300px */
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Spazio tra gli screenshot */
     margin-bottom: 20px;
 }
 
 .screenshots img {
-    width: 100%;
-    height: 200px; /* Altezza fissa */
+    width: 200px; /* Larghezza fissa per tutti gli screenshot */
+    height: 150px; /* Altezza fissa per tutti gli screenshot */
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
