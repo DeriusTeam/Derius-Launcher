@@ -72,10 +72,11 @@ header h1 {
 /* Stili per la homepage */
 /* ==================== */
 .games-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Larghezza minima di 150px */
+    display: flex;
+    flex-wrap: wrap;
     gap: 5px; /* Spaziatura ridotta tra le card */
     padding: 10px; /* Padding ridotto */
+    justify-content: center; /* Centra le card */
 }
 
 .game-card {
