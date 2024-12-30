@@ -7,7 +7,7 @@
     --background-color: #1e1e1e;
     --card-color: #2a2a2a;
     --text-color: #ffffff;
-    --header-color: #1a1a1a;
+    --header-color: #111;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     --border-radius: 12px;
@@ -25,8 +25,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1e1e1e;
-    color: #ffffff;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -39,47 +39,47 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* Altezza della barra */
-    background-color: #111; /* Nero molto scuro */
+    height: 70px;
+    background-color: var(--header-color);
     display: flex;
-    align-items: center; /* Allinea gli elementi verticalmente al centro */
-    padding: 0 20px; /* Spaziatura interna */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: var(--shadow);
     z-index: 1000;
 }
 
-/* Allineamento logo e testo */
 .logo {
     display: flex;
-    align-items: center; /* Allinea logo e testo verticalmente */
+    align-items: center;
 }
 
 .logo img {
-    width: 40px; /* Dimensione del logo */
+    width: 40px;
     height: auto;
-    margin-right: 10px; /* Spaziatura tra logo e testo */
+    margin-right: 10px;
 }
 
 header h1 {
-    font-size: 1.5rem; /* Dimensione del titolo */
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #ffffff;
-    margin: 0; /* Rimuove il margine predefinito */
+    color: var(--text-color);
+    margin: 0;
 }
 
 /* ==================== */
 /* Contenuto principale */
 /* ==================== */
 main {
-    margin-top: 90px; /* Spazio tra la barra e il contenuto */
+    margin-top: 90px;
     padding: 20px;
 }
+
 /* ==================== */
 /* Sezione delle card */
 /* ==================== */
 .games-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Card piccole e verticali */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -87,7 +87,7 @@ main {
 .game-card {
     background-color: var(--card-color);
     border-radius: var(--border-radius);
-    overflow: hidden; /* Nasconde il contenuto che esce dalla card */
+    overflow: hidden;
     box-shadow: var(--shadow);
     text-decoration: none;
     color: var(--text-color);
@@ -97,18 +97,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px; /* Altezza fissa per le card */
-    width: 100%; /* Larghezza al 100% del contenitore */
-}
-
-.game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--hover-shadow);
+    height: 300px;
+    width: 100%;
 }
 
 .game-card img {
-    width: 100%; /* Larghezza al 100% della card */
-    height: 180px; /* Altezza fissa per l'immagine */
+    width: 100%;
+    height: 180px;
     object-fit: contain; /* Adatta l'immagine senza ritagliarla */
     border-bottom: 2px solid #444;
     transition: transform var(--transition-speed) ease;
@@ -120,13 +115,13 @@ main {
 
 .game-card h3 {
     margin: 15px 0;
-    font-size: 1.1rem; /* Dimensione del testo */
+    font-size: 1.1rem;
     font-weight: 600;
     padding: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limita il testo a 2 righe */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -148,38 +143,19 @@ main {
 /* Media query per schermi piccoli */
 /* ==================== */
 @media (max-width: 768px) {
-    header {
-        height: 60px; /* Barra più bassa su mobile */
-        padding: 0 15px;
-    }
-
-    header h1 {
-        font-size: 1.2rem; /* Titolo più piccolo su mobile */
-    }
-
-    .logo img {
-        width: 35px; /* Logo più piccolo su mobile */
-    }
-
-    main {
-        margin-top: 80px; /* Meno spazio su mobile */
-        padding: 15px;
-    }
-
     .games-section {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Card più piccole su mobile */
-        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
     .game-card {
-        height: 240px; /* Altezza ridotta su mobile */
+        height: 250px;
     }
 
     .game-card img {
-        height: 130px; /* Immagine più piccola su mobile */
+        height: 130px;
     }
 
     .game-card h3 {
-        font-size: 1rem; /* Testo più piccolo su mobile */
+        font-size: 1rem;
     }
 }
