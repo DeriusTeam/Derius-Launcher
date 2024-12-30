@@ -17,8 +17,8 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 100;
-    padding: 100;
+    margin: 200;
+    padding: 200;
     overflow-x: hidden;
 }
 
