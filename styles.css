@@ -28,18 +28,15 @@ body {
 header {
     background-color: #333;
     padding: 10px 20px;
-    position: fixed; /* Fissa l'header in alto */
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
     box-shadow: var(--shadow);
     height: 60px; /* Altezza fissa per l'header */
+    display: flex;
+    align-items: center; /* Allinea il logo e il testo verticalmente al centro */
 }
 
 /* Logo e titolo */
 .logo {
-    float: left;
     margin-right: 10px;
 }
 
@@ -54,12 +51,10 @@ header {
 }
 
 header h1 {
-    float: left;
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0;
     color: var(--text-color);
-    line-height: 40px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -69,8 +64,8 @@ header h1 {
 /* Stili per il contenuto principale */
 /* ==================== */
 .main-content {
-    margin-top: 80px; /* Margine superiore per separare il contenuto dall'header */
     padding: 20px;
+    margin-top: 60px; /* Margine superiore uguale all'altezza dell'header */
 }
 
 /* ==================== */
