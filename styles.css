@@ -19,11 +19,27 @@ header {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Per posizionare il logo */
 }
 
 header h1 {
     font-size: 2.5rem;
     font-weight: 600;
+    margin: 0; /* Rimuove il margine predefinito */
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logo img {
+    width: 50px; /* Regola la dimensione del logo */
+    height: auto;
+    border-radius: 50%; /* Opzionale: rende il logo rotondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Opzionale: aggiunge un'ombra */
 }
 
 /* Sezione giochi */
