@@ -53,23 +53,24 @@ header {
     align-items: center; /* Allinea logo e testo verticalmente */
 }
 
+/* Stile per il logo e il testo */
+.logo img, header h1 {
+    display: inline-block;
+    vertical-align: middle; /* Allinea verticalmente al centro */
+}
+
 .logo img {
     width: 40px; /* Dimensione del logo */
     height: auto;
-    transition: transform var(--transition-speed) ease;
-}
-
-.logo img:hover {
-    transform: scale(1.1);
+    margin-right: 10px; /* Spaziatura tra logo e testo */
 }
 
 header h1 {
     font-size: 1.5rem; /* Dimensione del titolo */
     font-weight: 600;
     color: var(--text-color);
-    margin-left: 10px; /* Spaziatura tra logo e testo */
+    margin: 0; /* Rimuove il margine predefinito */
 }
-
 /* ==================== */
 /* Contenuto principale */
 /* ==================== */
