@@ -24,7 +24,7 @@ body {
 /* ==================== */
 .games-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Larghezza minima di 200px */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Larghezza minima di 220px */
     gap: 20px; /* Spaziatura tra le card */
     padding: 20px; /* Padding della sezione */
 }
@@ -40,7 +40,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.5s ease-out;
     width: 100%; /* Larghezza al 100% del contenitore */
-    height: 300px; /* Altezza maggiore per un aspetto più bilanciato */
+    height: 320px; /* Altezza maggiore per un aspetto più bilanciato */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,7 +54,7 @@ body {
 
 .game-card img {
     width: 100%;
-    height: 180px; /* Altezza maggiore per l'immagine */
+    height: 200px; /* Altezza maggiore per l'immagine */
     object-fit: contain; /* Adatta l'immagine senza ritagli */
     background-color: #333; /* Sfondo per evitare spazi vuoti */
     padding: 10px; /* Padding per distanziare l'immagine dai bordi */
@@ -78,6 +78,7 @@ body {
     -webkit-line-clamp: 2; /* Limita il testo a 2 righe */
     -webkit-box-orient: vertical;
     word-wrap: break-word; /* Permette al testo di andare a capo */
+    line-height: 1.4; /* Migliora la spaziatura tra le righe */
 }
 
 .game-card:hover h3 {
