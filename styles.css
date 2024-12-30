@@ -37,7 +37,7 @@ header {
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* Effetto hover sul logo */
+    transform: scale(1.1);
 }
 
 header h1 {
@@ -104,7 +104,7 @@ header h1 {
 }
 
 .game-card:hover img {
-    transform: scale(1.1); /* Effetto hover sull'immagine */
+    transform: scale(1.1);
 }
 
 .game-card h3 {
@@ -115,7 +115,7 @@ header h1 {
 }
 
 .game-card:hover h3 {
-    color: var(--primary-color); /* Cambia colore al titolo al passaggio del mouse */
+    color: var(--primary-color);
 }
 
 /* Animazioni */
