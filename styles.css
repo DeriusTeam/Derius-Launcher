@@ -29,7 +29,7 @@ header {
     background-color: #333;
     padding: 10px 20px; /* Padding ridotto */
     display: flex;
-    justify-content: flex-end; /* Allinea il contenuto a destra */
+    justify-content: flex-start; /* Allinea il contenuto a sinistra */
     align-items: center; /* Allinea il logo e il testo verticalmente al centro */
     box-shadow: var(--shadow);
     position: fixed; /* Fissa l'header in alto */
