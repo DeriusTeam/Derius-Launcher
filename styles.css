@@ -27,8 +27,8 @@ header {
     left: 0;
     width: 100%;
     height: 60px; /* Altezza dell'header */
-    background-color: #fff; /* Colore di sfondo */
     z-index: 1000; /* Assicura che l'header sia sopra gli altri elementi */
+    background-color: #333; /* Colore originale */
 }
 
 /* Stile per il contenuto principale */
