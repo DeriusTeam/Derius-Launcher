@@ -40,7 +40,7 @@ header {
     left: 0;
     width: 100%;
     height: 70px; /* Altezza della barra */
-    background-color: #1a1a1a; /* Colore nero chiaro */
+    background-color: #111; /* Nero molto scuro */
     display: flex;
     align-items: center; /* Allinea gli elementi verticalmente al centro */
     padding: 0 20px; /* Spaziatura interna */
