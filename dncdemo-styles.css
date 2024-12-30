@@ -68,19 +68,21 @@
     margin-bottom: 10px;
 }
 
+/* Sezione screenshot */
 .screenshots {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larghezza minima di 300px */
     gap: 10px;
     margin-bottom: 20px;
 }
 
 .screenshots img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Larghezza fissa al 100% del contenitore */
+    height: auto; /* Altezza automatica per mantenere il rapporto d'aspetto */
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    object-fit: cover; /* Ritaglia l'immagine per adattarla al contenitore */
 }
 
 .screenshots img:hover {
