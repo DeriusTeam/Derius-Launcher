@@ -7,17 +7,18 @@
 }
 
 .game-hero {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     margin-bottom: 40px;
     animation: slideInLeft 1s ease-out;
 }
 
 .game-cover img {
-    width: 300px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
 
@@ -26,7 +27,6 @@
 }
 
 .game-details {
-    flex: 1;
     animation: slideInRight 1s ease-out;
 }
 
@@ -44,8 +44,8 @@
 .download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -53,7 +53,7 @@
 }
 
 .download-button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color);
     transform: translateY(-5px); /* Effetto hover sul pulsante */
 }
 
@@ -69,16 +69,17 @@
 }
 
 .screenshots {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     margin-bottom: 20px;
 }
 
 .screenshots img {
-    width: 200px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
 
