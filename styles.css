@@ -33,6 +33,9 @@ header {
     height: 60px; /* Altezza fissa per l'header */
     display: flex;
     align-items: center; /* Allinea il logo e il testo verticalmente al centro */
+    position: sticky; /* Rende l'header "sticky" (fisso durante lo scorrimento) */
+    top: 0; /* Fissa l'header in cima alla pagina */
+    z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
 }
 
 /* Logo e titolo */
