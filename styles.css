@@ -44,7 +44,7 @@ header {
 }
 
 .logo img {
-    width: 40px;
+    width: 40px; /* Logo piccolo */
     height: auto;
     transition: transform 0.3s ease;
 }
