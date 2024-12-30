@@ -68,7 +68,7 @@ header h1 {
 /* ==================== */
 .main-content {
     padding: 20px;
-    margin-top: 60px; /* Margine superiore uguale all'altezza dell'header */
+    margin-top: 80px; /* Margine superiore maggiore per evitare sovrapposizioni */
 }
 
 /* ==================== */
