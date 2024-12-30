@@ -23,7 +23,7 @@
 }
 
 .game-cover img:hover {
-    transform: scale(1.05); /* Effetto hover sull'immagine di copertina */
+    transform: scale(1.05);
 }
 
 .game-details {
@@ -54,7 +54,7 @@
 
 .download-button:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-5px); /* Effetto hover sul pulsante */
+    transform: translateY(-5px);
 }
 
 /* Sezione informazioni aggiuntive */
@@ -84,7 +84,7 @@
 }
 
 .screenshots img:hover {
-    transform: scale(1.1); /* Effetto hover sugli screenshot */
+    transform: scale(1.1);
 }
 
 .system-requirements {
