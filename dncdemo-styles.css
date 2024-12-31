@@ -22,20 +22,18 @@ body {
     overflow-x: hidden;
 }
 
-/* ==================== */
-/* Stili per l'header    */
-/* ==================== */
 header {
     background-color: #333;
-    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    box-shadow: var(--shadow);
-    height: 70px; /* Altezza fissa per l'header */
+    height: 70px;
     display: flex;
-    align-items: center; /* Allinea il logo e il testo verticalmente al centro */
-    position: fixed; /* Fissa l'header in cima alla pagina */
-    top: 0; /* Posiziona l'header in cima */
-    z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
 }
 
 .logo {
