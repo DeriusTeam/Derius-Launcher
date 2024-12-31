@@ -20,7 +20,8 @@
         // Funzione per controllare lo stato di manutenzione
         async function checkManutenzione() {
             try {
-                const response = await fetch('/config.json'); // Leggi il file config.json
+                // Aggiungi un timestamp alla richiesta per evitare la cache
+                const response = await fetch(`/config.json?timestamp=${new Date().getTime()}`);
                 const config = await response.json(); // Converti la risposta in JSON
 
                 // Se la manutenzione è disattivata, reindirizza a index.html
@@ -34,6 +35,9 @@
 
         // Controlla lo stato di manutenzione ogni 5 secondi
         setInterval(checkManutenzione, 5000); // 5000 millisecondi = 5 secondi
+
+        // Esegui il controllo anche al caricamento della pagina
+        checkManutenzione();
     </script>
 </body>
 </html>
