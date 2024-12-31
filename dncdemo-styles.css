@@ -158,7 +158,7 @@ iframe {
     margin-top: 75px; /* Aggiunge 20px di spazio sopra l'iframe */
     border-radius: 12px; /* Mantiene il bordo arrotondato */
     width: 100%; /* Larghezza al 100% */
-    height: 152px; /* Altezza fissa */
+    height: 252px; /* Altezza fissa */
 }
 
 .system-requirements li {
