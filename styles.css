@@ -138,6 +138,36 @@ main {
     color: var(--primary-color); /* Cambia colore al passaggio del mouse */
 }
 
+/* Stili per la pagina di manutenzione */
+.manutenzione-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.manutenzione-logo {
+    width: 150px; /* Dimensione del logo */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.manutenzione-container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.manutenzione-messaggio {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif; /* Font diverso */
+    color: #cccccc;
+}
+
 /* ==================== */
 /* Animazioni */
 /* ==================== */
