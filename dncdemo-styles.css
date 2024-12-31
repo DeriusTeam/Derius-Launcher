@@ -30,7 +30,7 @@ header {
     padding: 10px 20px;
     width: 100%;
     box-shadow: var(--shadow);
-    height: 60px; /* Altezza fissa per l'header */
+    height: 70px; /* Altezza fissa per l'header */
     display: flex;
     align-items: center; /* Allinea il logo e il testo verticalmente al centro */
     position: fixed; /* Fissa l'header in cima alla pagina */
