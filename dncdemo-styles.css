@@ -54,7 +54,7 @@ header {
 header h1 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 0;
+    margin: 15;
     color: var(--text-color);
     white-space: nowrap;
     overflow: hidden;
