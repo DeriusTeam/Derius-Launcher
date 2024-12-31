@@ -1,7 +1,7 @@
 async function checkManutenzione() {
     try {
         // Carica il file di configurazione
-        const response = await fetch('/Derius-Launcher/config.json');
+        const response = await fetch('config.json');
         if (!response.ok) {
             throw new Error(`Errore ${response.status}: ${response.statusText}`);
         }
