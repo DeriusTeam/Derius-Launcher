@@ -92,7 +92,7 @@ main {
     text-decoration: none;
     color: var(--text-color);
     text-align: center;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Aggiungi transizione */
     animation: fadeInUp 0.5s ease-out;
     display: flex;
     flex-direction: column;
@@ -100,7 +100,6 @@ main {
     height: 300px; /* Altezza fissa per le card */
     width: 220px; /* Larghezza fissa per le card */
     margin: 0 auto; /* Centra le card se necessario */
-    padding: 10px; /* Aggiungi padding alla card */
 }
 
 .game-card:hover {
@@ -112,7 +111,7 @@ main {
     width: 100%; /* Larghezza al 100% della card */
     height: 180px; /* Altezza fissa per l'immagine */
     object-fit: contain; /* Adatta l'immagine senza ritagliarla */
-    background-color: transparent; /* Rendi lo sfondo trasparente */
+    background-color: #333; /* Sfondo per lo spazio vuoto */
     border-bottom: 2px solid #444;
     transition: transform var(--transition-speed) ease;
 }
@@ -122,17 +121,16 @@ main {
 }
 
 .game-card h3 {
-    margin: 10px 0; /* Riduci il margine superiore e inferiore */
+    margin: 15px 0;
     font-size: 1.1rem;
     font-weight: 600;
-    padding: 0 5px; /* Riduci il padding laterale */
+    padding: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    transition: transform var(--transition-speed) ease, color var(--transition-speed) ease;
-    line-height: 1.3; /* Aggiusta l'altezza della linea */
+    transition: transform var(--transition-speed) ease, color var(--transition-speed) ease; /* Aggiungi transizione */
 }
 
 .game-card:hover h3 {
