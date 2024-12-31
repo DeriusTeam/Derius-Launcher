@@ -1,5 +1,5 @@
 // Variabile che controlla lo stato di manutenzione
-const inManutenzione = true; // Imposta su `true` o `false` in base alle esigenze
+const inManutenzione = false; // Imposta su `true` o `false` in base alle esigenze
 
 // Ottieni il percorso della pagina corrente
 const paginaCorrente = window.location.pathname.split("/").pop(); // Esempio: "index.html" o "man.html"
