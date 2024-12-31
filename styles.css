@@ -112,7 +112,7 @@ main {
     width: 100%; /* Larghezza al 100% della card */
     height: 180px; /* Altezza fissa per l'immagine */
     object-fit: contain; /* Adatta l'immagine senza ritagliarla */
-    background-color: #333; /* Sfondo per lo spazio vuoto */
+    background-color: transparent; /* Rendi lo sfondo trasparente */
     border-bottom: 2px solid #444;
     transition: transform var(--transition-speed) ease;
 }
