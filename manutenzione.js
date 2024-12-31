@@ -18,6 +18,3 @@ function gestisciManutenzione() {
 
 // Esegui la funzione al caricamento della pagina
 gestisciManutenzione();
-
-// Controlla lo stato di manutenzione ogni 5 secondi (opzionale)
-setInterval(gestisciManutenzione, 5000); // 5000 millisecondi = 5 secondi
