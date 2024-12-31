@@ -24,7 +24,7 @@
                 const response = await fetch(`/config.json?timestamp=${new Date().getTime()}`);
                 const config = await response.json(); // Converti la risposta in JSON
 
-                // Se la manutenzione è disattivata, reindirizza a index.html
+                // Se la manutenzione è disattivata, reindirizza immediatamente a index.html
                 if (!config.is_manutenzione) {
                     window.location.href = "/index.html";
                 }
@@ -33,8 +33,8 @@
             }
         }
 
-        // Controlla lo stato di manutenzione ogni 5 secondi
-        setInterval(checkManutenzione, 5000); // 5000 millisecondi = 5 secondi
+        // Controlla lo stato di manutenzione ogni 1 secondo
+        setInterval(checkManutenzione, 1000); // 1000 millisecondi = 1 secondo
 
         // Esegui il controllo anche al caricamento della pagina
         checkManutenzione();
