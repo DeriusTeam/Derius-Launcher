@@ -1,9 +1,8 @@
+const manutenzione = true;
+
 async function checkManutenzione() {
     try {
-        const response = await fetch('/config.json');
-        const config = await response.json();
-
-        if (config.is_manutenzione && !window.location.pathname.endsWith('/man.html')) {
+        if (manutenzione && !window.location.pathname.endsWith('/man.html')) {
             window.location.href = "/man.html";
         }
     } catch (error) {
