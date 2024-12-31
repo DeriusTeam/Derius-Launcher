@@ -38,9 +38,9 @@ header {
     z-index: 1000; /* Assicura che l'header sia sopra altri elementi */
 }
 
-/* Logo e titolo */
 .logo {
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
