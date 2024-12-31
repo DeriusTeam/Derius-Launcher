@@ -1,3 +1,3 @@
-# Derius-Launcher
+# Derius Launcher
 
 ## The revolution of modding
