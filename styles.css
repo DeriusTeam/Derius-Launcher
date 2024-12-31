@@ -56,7 +56,11 @@ header {
 .logo img {
     width: 40px;
     height: auto;
-    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 header h1 {
