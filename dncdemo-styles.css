@@ -153,6 +153,14 @@ header h1 {
     padding: 0;
 }
 
+/* Stili per l'iframe di Spotify */
+iframe {
+    margin-top: 20px; /* Aggiunge 20px di spazio sopra l'iframe */
+    border-radius: 12px; /* Mantiene il bordo arrotondato */
+    width: 100%; /* Larghezza al 100% */
+    height: 152px; /* Altezza fissa */
+}
+
 .system-requirements li {
     font-size: 1.1rem;
     margin-bottom: 10px;
