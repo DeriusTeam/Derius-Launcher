@@ -79,7 +79,7 @@ main {
 /* ==================== */
 .games-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -98,7 +98,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     height: 300px; /* Altezza fissa per le card */
-    width: 220px; /* Larghezza fissa per le card */
+    width: 180px; /* Larghezza fissa per le card */
     margin: 0 auto; /* Centra le card se necessario */
 }
 
