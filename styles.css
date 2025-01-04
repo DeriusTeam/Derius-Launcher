@@ -132,7 +132,7 @@ main {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    transition: transform var(--transition-speed) ease, color var(--transition-speed) ease; /* Aggiungi transizione */
+    transition: transform var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .game-card:hover h3 {
