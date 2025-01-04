@@ -61,9 +61,6 @@ header h1 {
     text-overflow: ellipsis;
 }
 
-/* ==================== */
-/* Stili per il contenuto principale */
-/* ==================== */
 .main-content {
     padding: 20px;
     margin-top: 80px;
