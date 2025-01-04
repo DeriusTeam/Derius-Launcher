@@ -71,6 +71,18 @@ header h1 {
     animation: fadeIn 1s ease-out;
 }
 
+.separator {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+    margin: 40px 0;
+}
+
+.game-info h3 {
+    margin-top: 40px; /* Add margin to the top of the heading */
+    margin-bottom: 20px; /* Add margin to the bottom of the heading */
+}
+
 .game-hero {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -139,13 +151,14 @@ header h1 {
 }
 
 .screenshots img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .system-requirements {
     list-style-type: none;
     padding: 0;
 }
+
 
 /* Stili per l'iframe di Spotify */
 iframe {
