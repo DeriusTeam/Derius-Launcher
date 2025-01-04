@@ -10,9 +10,6 @@
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ==================== */
-/* Stili generali       */
-/* ==================== */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
