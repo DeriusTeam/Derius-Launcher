@@ -115,7 +115,7 @@ nav a.github-button:hover {
 }
 
 .game-cover img:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 
 .game-details {
