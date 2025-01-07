@@ -88,9 +88,11 @@ nav a.github-button:hover {
 
 .separator {
     border: 0;
-    height: 4px;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+    border-radius: 3px;
     margin: 40px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .game-info h3 {
@@ -190,6 +192,9 @@ nav a.github-button:hover {
 .system-requirements {
     list-style-type: none;
     padding: 0;
+    font-family: 'Roboto', sans-serif; /* Changed font family */
+    font-size: 1.2rem; /* Increased font size */
+    color: var(--highlight-color); /* Highlight color */
 }
 
 /* Stili per l'iframe di Spotify */
@@ -207,8 +212,12 @@ iframe:hover {
 }
 
 .system-requirements li {
-    font-size: 1.1rem;
     margin-bottom: 10px;
+}
+
+.system-requirements li strong {
+    color: var(--primary-color); /* Highlight strong text */
+    font-weight: bold;
 }
 
 /* Animazioni */
@@ -243,29 +252,36 @@ iframe:hover {
     }
 }
 
-/* Media query per schermi piccoli */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 80;
+        padding: 10x 15px; /* Reduced padding */
     }
 
     .logo img {
-        width: 30px;
+        width: 50px;
     }
 
     header h1 {
-        font-size: 1.2rem;
-        margin: 10px 0;
+        font-size: 1.2rem; /* Reduced font size */
+        margin: 0 15px; /* Adjusted margin */
+        flex-grow: 1; /* Allow the title to take available space */
+        text-align: left; /* Align text to the left */
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0; /* Removed margin-top */
     }
 
     nav a.github-button {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-        margin-left: 0;
-        margin-top: 10px;
+        padding: 8px 15px; /* Reduced padding */
+        font-size: 0.9rem; /* Reduced font size */
+        margin-left: 10px; /* Adjusted margin */
     }
 
     .game-hero {
