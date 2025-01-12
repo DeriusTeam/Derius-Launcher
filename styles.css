@@ -126,7 +126,9 @@ main {
 .game-card h3 {
     margin: 15px 0;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-family: "DynaPuff", serif;
+    font-style: normal;
+    font-weight: -1000;
     padding: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
